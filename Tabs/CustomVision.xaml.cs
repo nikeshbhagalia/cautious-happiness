@@ -23,6 +23,7 @@ namespace Tabs
 
         private async void loadCamera(object sender, EventArgs e)
         {
+            Save.IsVisible = false;
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -59,6 +60,8 @@ namespace Tabs
 
         async void ReadHandwrittenText(MediaFile file)
         {
+            loading.IsVisible = true;
+            loading.IsRunning = true;
             HttpClient client = new HttpClient();
 
             // Request headers.
@@ -105,6 +108,8 @@ namespace Tabs
                     }
                 }
                 TagLabel.Text = "\nError:\n" + error;
+                loading.IsRunning = false;
+                loading.IsVisible = false;
                 return;
             }
 
@@ -128,6 +133,8 @@ namespace Tabs
             if (i == 10 && contentString.IndexOf("\"status\":\"Succeeded\"") == -1)
             {
                 TagLabel.Text = "\nTimeout error.\n";
+                loading.IsRunning = false;
+                loading.IsVisible = false;
                 return;
             }
 
@@ -157,6 +164,9 @@ namespace Tabs
                 j += textlines[j].Split(' ').Length+1;
             }
             TagLabel.Text = "\nResponse:\n" + result;
+            Save.IsVisible = true;
+            loading.IsRunning = false;
+            loading.IsVisible = false;
         }
 
         static string JsonPrettyPrint(string json)
@@ -217,8 +227,22 @@ namespace Tabs
                     }
                 }
             }
-            //Debug.WriteLine(sb.ToString().Trim());
             return sb.ToString().Trim();
+        }
+
+        async Task postNoteAsync()
+        {
+            loading.IsRunning = true;
+            loading.IsVisible = true;
+            nbha675 model = new nbha675()
+            {
+                Text = TagLabel.Text.Substring(11).Trim()
+
+            };
+
+            await AzureManager.AzureManagerInstance.PostNote(model);
+            loading.IsRunning = false;
+            loading.IsVisible = false;
         }
     }
 }
