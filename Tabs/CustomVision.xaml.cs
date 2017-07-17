@@ -243,6 +243,7 @@ namespace Tabs
             await AzureManager.AzureManagerInstance.PostNote(model);
             loading.IsRunning = false;
             loading.IsVisible = false;
+            Save.IsVisible = false;
         }
     }
 }
