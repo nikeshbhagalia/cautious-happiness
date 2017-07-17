@@ -5,6 +5,10 @@
     </ContentPage.Content>
     <StackLayout Margin="20" Orientation="Vertical">
         <Button Text="Take Photo and Analyze" Clicked="loadCamera" />
+        <StackLayout Orientation="Horizontal">
+            <Label x:Name="TagLabel">
+            </Label>
+        </StackLayout>
         <Image x:Name="image" />
     </StackLayout>
 </ContentPage>
