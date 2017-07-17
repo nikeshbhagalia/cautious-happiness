@@ -3,4 +3,8 @@
     <ContentPage.Content>
         <Label Text="Custom Vision Tab" VerticalOptions="Center" HorizontalOptions="Center" />
     </ContentPage.Content>
+    <StackLayout Margin="20" Orientation="Vertical">
+        <Button Text="Take Photo and Analyze" Clicked="loadCamera" />
+        <Image x:Name="image" />
+    </StackLayout>
 </ContentPage>
