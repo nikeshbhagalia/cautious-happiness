@@ -7,7 +7,6 @@ namespace Tabs
 {
     public class AzureManager
     {
-
         private static AzureManager instance;
         private MobileServiceClient client;
         private IMobileServiceTable<nbha675> notesTable;
