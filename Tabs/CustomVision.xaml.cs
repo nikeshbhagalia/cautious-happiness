@@ -1,5 +1,6 @@
 ﻿using Plugin.Media;
 using Plugin.Media.Abstractions;
+using System.Collections.Generic;
 using System;
 using System.Linq;
 using System.Diagnostics;
@@ -10,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using Xamarin.Forms;
-using System.Collections.Generic;
 
 namespace Tabs
 {
