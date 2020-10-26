@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.WindowsAzure.MobileServices;
 using Xamarin.Forms;
 
 namespace Tabs
