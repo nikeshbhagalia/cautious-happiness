@@ -8,18 +8,18 @@ namespace Tabs
     public class AzureManager
     {
         private static AzureManager instance;
-        private MobileServiceClient client;
+        private MobileServiceClient _client;
         private IMobileServiceTable<nbha675> notesTable;
 
         private AzureManager()
         {
-            this.client = new MobileServiceClient("https://nbha675.azurewebsites.net");
+            _client = new MobileServiceClient("https://nbha675.azurewebsites.net");
             this.notesTable = this.client.GetTable<nbha675>();
         }
 
         public MobileServiceClient AzureClient
         {
-            get { return client; }
+            get { return _client; }
         }
 
         public static AzureManager AzureManagerInstance
