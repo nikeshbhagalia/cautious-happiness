@@ -7,7 +7,7 @@ namespace Tabs
 {
     public class AzureManager
     {
-        private static AzureManager instance;
+        private static AzureManager _instance;
         private MobileServiceClient _client;
         private IMobileServiceTable<nbha675> notesTable;
 
@@ -26,12 +26,12 @@ namespace Tabs
         {
             get
             {
-                if (instance is null)
+                if (_instance is null)
                 {
-                    instance = new AzureManager();
+                    _instance = new AzureManager();
                 }
 
-                return instance;
+                return _instance;
             }
         }
 
