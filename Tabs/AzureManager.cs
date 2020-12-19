@@ -9,7 +9,7 @@ namespace Tabs
     {
         private static AzureManager _instance;
         private MobileServiceClient _client;
-        private IMobileServiceTable<nbha675> notesTable;
+        private IMobileServiceTable<nbha675> _notesTable;
 
         private AzureManager()
         {
@@ -37,12 +37,12 @@ namespace Tabs
 
         public async Task<List<nbha675>> GetAllNotes()
         {
-            return await this.notesTable.ToListAsync();
+            return await _notesTable.ToListAsync();
         }
 
         public async Task PostNote(nbha675 noteModel)
         {
-            await this.notesTable.InsertAsync(noteModel);
+            await _notesTable.InsertAsync(noteModel);
         }
     }
 }
