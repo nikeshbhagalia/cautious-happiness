@@ -21,7 +21,7 @@ namespace Tabs
             InitializeComponent();
         }
 
-        private async void loadCamera(object sender, EventArgs e)
+        private async void LoadCamera(object sender, EventArgs e)
         {
             Save.IsVisible = false;
             await CrossMedia.Current.Initialize();
