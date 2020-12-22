@@ -199,7 +199,7 @@ namespace Tabs
             return sb.ToString().Trim();
         }
 
-        async Task postNoteAsync()
+        async Task PostNoteAsync()
         {
             loading.IsRunning = true;
             loading.IsVisible = true;
