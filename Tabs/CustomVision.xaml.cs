@@ -145,7 +145,7 @@ namespace Tabs
 
             json = json.Replace(Environment.NewLine, "").Replace("\t", "");
 
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             bool quote = false;
             bool ignore = false;
             int offset = 0;
