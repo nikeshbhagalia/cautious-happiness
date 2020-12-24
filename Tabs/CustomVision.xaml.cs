@@ -64,7 +64,7 @@ namespace Tabs
             loading.IsRunning = true;
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "bcf289ccb2734314ae4d616154216468");
-            string requestParameters = "handwriting=true";
+            var requestParameters = "handwriting=true";
             string uri = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/recognizeText?" + requestParameters;
             HttpResponseMessage response = null;
             string operationLocation = null;
