@@ -92,7 +92,7 @@ namespace Tabs
                 return;
             }
             string contentString;
-            int i = 0;
+            var i = 0;
             do
             {
                 //System.Threading.Thread.Sleep(1000);
