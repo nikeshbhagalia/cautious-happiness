@@ -54,7 +54,7 @@ namespace Tabs
         static byte[] GetImageAsByteArray(MediaFile file)
         {
             var stream = file.GetStream();
-            BinaryReader binaryReader = new BinaryReader(stream);
+            var binaryReader = new BinaryReader(stream);
             return binaryReader.ReadBytes((int)stream.Length);
         }
 
