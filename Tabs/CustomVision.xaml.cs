@@ -68,7 +68,7 @@ namespace Tabs
             var uri = "https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/recognizeText?" + requestParameters;
             HttpResponseMessage response = null;
             string operationLocation = null;
-            byte[] byteData = GetImageAsByteArray(file);
+            var byteData = GetImageAsByteArray(file);
             ByteArrayContent content = new ByteArrayContent(byteData);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
             response = await client.PostAsync(uri, content);
