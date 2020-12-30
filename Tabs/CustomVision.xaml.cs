@@ -69,7 +69,7 @@ namespace Tabs
             HttpResponseMessage response = null;
             string operationLocation = null;
             var byteData = GetImageAsByteArray(file);
-            ByteArrayContent content = new ByteArrayContent(byteData);
+            var content = new ByteArrayContent(byteData);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
             response = await client.PostAsync(uri, content);
             if (response.IsSuccessStatusCode)
