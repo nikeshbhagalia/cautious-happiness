@@ -76,7 +76,7 @@ namespace Tabs
                 operationLocation = response.Headers.GetValues("Operation-Location").FirstOrDefault();
             else
             {
-                string ejson = JsonPrettyPrint(await response.Content.ReadAsStringAsync());
+                var ejson = JsonPrettyPrint(await response.Content.ReadAsStringAsync());
                 string[] elines = ejson.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
                 string error = "";
                 foreach (string line in elines)
