@@ -77,7 +77,7 @@ namespace Tabs
             else
             {
                 var ejson = JsonPrettyPrint(await response.Content.ReadAsStringAsync());
-                string[] elines = ejson.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+                var elines = ejson.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
                 string error = "";
                 foreach (string line in elines)
                 {
