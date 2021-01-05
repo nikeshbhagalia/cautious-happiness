@@ -109,7 +109,7 @@ namespace Tabs
                 return;
             }
             var json = JsonPrettyPrint(contentString);
-            string[] lines = json.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            var lines = json.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             List<string> textlines = new List<string>();
             foreach (string line in lines)
             {
