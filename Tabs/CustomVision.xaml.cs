@@ -111,7 +111,7 @@ namespace Tabs
             var json = JsonPrettyPrint(contentString);
             var lines = json.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             var textlines = new List<string>();
-            foreach (string line in lines)
+            foreach (var line in lines)
             {
                 if (line.Trim().IndexOf("t") == 1)
                 {
