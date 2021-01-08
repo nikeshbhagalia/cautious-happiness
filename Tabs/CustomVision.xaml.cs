@@ -126,7 +126,7 @@ namespace Tabs
                 }
             }
             string result = "";
-            int j = 0;
+            var j = 0;
             while(j<textlines.ToArray().Length)
             {
                 result += textlines[j] + "\n";
