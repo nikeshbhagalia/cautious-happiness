@@ -147,7 +147,7 @@ namespace Tabs
 
             var sb = new StringBuilder();
             var quote = false;
-            bool ignore = false;
+            var ignore = false;
             int offset = 0;
             int indentLength = 3;
 
