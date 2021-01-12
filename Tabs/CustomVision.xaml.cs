@@ -148,7 +148,7 @@ namespace Tabs
             var sb = new StringBuilder();
             var quote = false;
             var ignore = false;
-            int offset = 0;
+            var offset = 0;
             int indentLength = 3;
 
             foreach (char ch in json)
