@@ -149,7 +149,7 @@ namespace Tabs
             var quote = false;
             var ignore = false;
             var offset = 0;
-            int indentLength = 3;
+            var indentLength = 3;
 
             foreach (char ch in json)
             {
