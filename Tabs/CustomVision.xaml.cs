@@ -151,7 +151,7 @@ namespace Tabs
             var offset = 0;
             var indentLength = 3;
 
-            foreach (char ch in json)
+            foreach (var ch in json)
             {
                 switch (ch)
                 {
