@@ -39,7 +39,7 @@ namespace Tabs
                 Name = $"{DateTime.UtcNow}.jpg"
             });
 
-            if (file == null)
+            if (file is null)
                 return;
 
             image.Source = ImageSource.FromStream(() =>
