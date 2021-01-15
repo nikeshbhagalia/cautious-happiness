@@ -203,7 +203,7 @@ namespace Tabs
         {
             loading.IsRunning = true;
             loading.IsVisible = true;
-            nbha675 model = new nbha675()
+            var model = new nbha675()
             {
                 Text = TagLabel.Text.Substring(11).Trim()
 
