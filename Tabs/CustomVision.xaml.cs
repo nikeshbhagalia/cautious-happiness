@@ -206,7 +206,6 @@ namespace Tabs
             var model = new nbha675()
             {
                 Text = TagLabel.Text.Substring(11).Trim()
-
             };
 
             await AzureManager.AzureManagerInstance.PostNote(model);
