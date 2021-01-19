@@ -46,7 +46,7 @@ namespace Tabs
             {
                 return file.GetStream();
             });
-            TagLabel.Text = "";
+            TagLabel.Text = string.Empty;
             ReadHandwrittenText(file);
             file.Dispose();
         }
