@@ -142,7 +142,7 @@ namespace Tabs
             if (string.IsNullOrEmpty(json))
                 return string.Empty;
 
-            json = json.Replace(Environment.NewLine, "").Replace("\t", "");
+            json = json.Replace(Environment.NewLine, string.Empty).Replace("\t", "");
 
             var sb = new StringBuilder();
             var quote = false;
