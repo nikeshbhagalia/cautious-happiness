@@ -124,7 +124,7 @@ namespace Tabs
                     }
                 }
             }
-            var result = "";
+            var result = string.Empty;
             var j = 0;
             while(j<textlines.ToArray().Length)
             {
