@@ -12,7 +12,6 @@ namespace Tabs
         public AzureTable()
         {
             InitializeComponent();
-
         }
 
         async void Handle_ClickedAsync(object sender, System.EventArgs e)
