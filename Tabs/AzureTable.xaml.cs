@@ -21,6 +21,5 @@ namespace Tabs
             NotesList.ItemsSource = notes;
             loading.IsRunning = false;
         }
-
     }
 }
