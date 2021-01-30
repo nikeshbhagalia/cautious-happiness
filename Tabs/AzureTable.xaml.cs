@@ -8,7 +8,6 @@ namespace Tabs
 {
     public partial class AzureTable : ContentPage
     {
-
         public AzureTable()
         {
             InitializeComponent();
