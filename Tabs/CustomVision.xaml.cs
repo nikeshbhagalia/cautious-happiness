@@ -32,7 +32,7 @@ namespace Tabs
                 return;
             }
 
-            MediaFile file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+            var file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
             {
                 PhotoSize = PhotoSize.Medium,
                 Directory = "Sample",
