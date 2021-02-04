@@ -36,7 +36,7 @@ namespace Tabs
         }
 
         public async Task<List<nbha675>> GetAllNotes() =>
-            return await _notesTable.ToListAsync();
+            await _notesTable.ToListAsync();
 
         public async Task PostNote(nbha675 noteModel)
         {
