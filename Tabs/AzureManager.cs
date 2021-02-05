@@ -14,7 +14,7 @@ namespace Tabs
         private AzureManager()
         {
             _client = new MobileServiceClient("https://nbha675.azurewebsites.net");
-            this.notesTable = this.client.GetTable<nbha675>();
+            _notesTable = this.client.GetTable<nbha675>();
         }
 
         public MobileServiceClient AzureClient
