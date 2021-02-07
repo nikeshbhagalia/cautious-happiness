@@ -11,12 +11,6 @@ namespace Tabs
         private MobileServiceClient _client;
         private IMobileServiceTable<nbha675> _notesTable;
 
-        private AzureManager()
-        {
-            _client = new MobileServiceClient("https://nbha675.azurewebsites.net");
-            _notesTable = this.client.GetTable<nbha675>();
-        }
-
         public MobileServiceClient AzureClient
         {
             get { return _client; }
@@ -38,6 +32,12 @@ namespace Tabs
         public async Task PostNote(nbha675 noteModel)
         {
             await _notesTable.InsertAsync(noteModel);
+        }
+        
+        private AzureManager()
+        {
+            _client = new MobileServiceClient("https://nbha675.azurewebsites.net");
+            _notesTable = this.client.GetTable<nbha675>();
         }
     }
 }
