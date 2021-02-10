@@ -73,7 +73,9 @@ namespace Tabs
             content.Headers.ContentType = new MediaTypeHeaderValue("application/octet-stream");
             response = await client.PostAsync(uri, content);
             if (response.IsSuccessStatusCode)
+            {
                 operationLocation = response.Headers.GetValues("Operation-Location").FirstOrDefault();
+            }
             else
             {
                 var ejson = JsonPrettyPrint(await response.Content.ReadAsStringAsync());
