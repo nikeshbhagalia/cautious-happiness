@@ -167,7 +167,9 @@ namespace Tabs
                 }
 
                 if (quote)
+                {
                     sb.Append(ch);
+                }
                 else
                 {
                     switch (ch)
