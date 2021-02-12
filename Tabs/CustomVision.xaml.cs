@@ -159,7 +159,10 @@ namespace Tabs
                 switch (ch)
                 {
                     case '"':
-                        if (!ignore) quote = !quote;
+                        if (!ignore)
+                        {
+                            quote = !quote;
+                        }
                         break;
                     case '\'':
                         if (quote) ignore = !ignore;
