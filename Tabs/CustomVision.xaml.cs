@@ -165,7 +165,10 @@ namespace Tabs
                         }
                         break;
                     case '\'':
-                        if (quote) ignore = !ignore;
+                        if (quote)
+                        {
+                            ignore = !ignore;
+                        }
                         break;
                 }
 
