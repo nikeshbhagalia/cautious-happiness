@@ -202,7 +202,10 @@ namespace Tabs
                             sb.Append(' ');
                             break;
                         default:
-                            if (ch != ' ') sb.Append(ch);
+                            if (ch != ' ')
+                            {
+                                sb.Append(ch);
+                            }
                             break;
                     }
                 }
