@@ -40,7 +40,9 @@ namespace Tabs
             });
 
             if (file is null)
+            {
                 return;
+            }
 
             image.Source = ImageSource.FromStream(() =>
             {
