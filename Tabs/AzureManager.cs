@@ -29,10 +29,8 @@ namespace Tabs
         public async Task<List<nbha675>> GetAllNotes() =>
             await _notesTable.ToListAsync();
 
-        public async Task PostNote(nbha675 noteModel)
-        {
+        public async Task PostNote(nbha675 noteModel) =>
             await _notesTable.InsertAsync(noteModel);
-        }
         
         private AzureManager()
         {
