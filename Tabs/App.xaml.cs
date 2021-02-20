@@ -7,7 +7,6 @@ namespace Tabs
         public App()
         {
             InitializeComponent();
-
             MainPage = new TabsPage();
         }
 
