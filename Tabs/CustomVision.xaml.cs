@@ -130,7 +130,7 @@ namespace Tabs
             }
             var result = string.Empty;
             var j = 0;
-            while(j<textlines.ToArray().Length)
+            while(j < textlines.ToArray().Length)
             {
                 result += textlines[j] + "\n";
                 j += textlines[j].Split(' ').Length+1;
