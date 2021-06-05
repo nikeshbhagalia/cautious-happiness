@@ -21,7 +21,6 @@ namespace Tabs
             get
             {
                 _instance =_instance ?? new AzureManager();
-
                 return _instance;
             }
         }
