@@ -16,8 +16,7 @@ namespace Tabs
         async void Handle_ClickedAsync(object sender, EventArgs e)
         {
             loading.IsRunning = true;
-            var notes = await AzureManager.AzureManagerInstance.GetAllNotes();
-            NotesList.ItemsSource = notes;
+            NotesList.ItemsSource = await AzureManager.AzureManagerInstance.GetAllNotes();
             loading.IsRunning = false;
         }
     }
